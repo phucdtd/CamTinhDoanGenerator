@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+    <head>
+        <link href="/static/bootstrap/bootstrap.min.css" rel="stylesheet"/>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="initial-scale=1, width=device-width"/>
+        <link rel="shortcut icon" href="/static/favicon.ico">
+        <style>
+        body {
+background: #E0EAFC;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #CFDEF3, #E0EAFC);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #CFDEF3, #E0EAFC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */        
+}
+        </style>
+        <title>{{ title }}</title>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="page-header">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h1>
+                            Cảm tình Đoàn generator
+                        </h1>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="/static/pic.png" width="285" height="228">
+                    </div>
+            </div>
+            {% block body %}{% endblock %}
+        </div>
+    </body>
+</html>

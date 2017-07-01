@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <form id="form" name="info" action="{{ url_for('checking') }}" method="post">
+        <div class="form-group">
+            <label for="name">Họ và tên</label>
+            <input type="name" class="form-control" id="name" placeholder="Ví dụ: Minh Khoa" name="name" required value="{{ user_name }}"/>
+        <div>
+        <div class="form-group">
+            <label for="class">Lớp</label>
+            <input type="name" class="form-control" id="class" placeholder="Ví dụ: 12A1 Toán" name="class" required value="{{ user_class }}"/>
+        </div>
+        <div class="form-group">
+            <label for="school">Trường</label>
+            <input type="name" class="form-control" id="school" placeholder="Ví dụ: THPT chuyên Khoa học Tự nhiên" name="school" required value="{{ user_school }}"/>
+        </div>
+        <div class="form-group">
+            <label for="question1">Câu hỏi 1</label>
+            <select class="form-control" id="question1" name="question1">
+                <option value="0" selected>None</option>
+                <option value="1">Đồng chí hãy giải thích và nói lên cảm nhận của mình đối với việc Đoàn thanh niên Cộng sản Hồ Chí Minh trải qua sau 6 lần đổi tên gọi ?</option>
+                <option value="2">Hãy đưa ra năm kiến nghị và giải pháp với đoàn trường nơi đồng chí đang công tác về các hoạt động thu hút và đoàn kết thanh niên ?</option>
+                <option value="3">Nêu những nhận thức của em về Đoàn thanh niên Cộng sản Hồ Chí Minh?</option>
+                <option value="4">Lý tưởng của Đoàn thanh niên Cộng sản Hồ Chí Minh và Thanh niên Việt Nam là gì? Em sẽ làm gì để thực hiện lý tưởng đó?</option> 
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="question2">Câu hỏi 2</label>
+            <select class="form-control" id="question2" name="question2">
+                <option value="0" selected>None</option>
+                <option value="1">Đồng chí hãy giải thích và nói lên cảm nhận của mình đối với việc Đoàn thanh niên Cộng sản Hồ Chí Minh trải qua sau 6 lần đổi tên gọi ?</option>
+                <option value="2">Hãy đưa ra năm kiến nghị và giải pháp với đoàn trường nơi đồng chí đang công tác về các hoạt động thu hút và đoàn kết thanh niên ?</option>
+                <option value="3">Nêu những nhận thức của em về Đoàn thanh niên Cộng sản Hồ Chí Minh?</option>
+                <option value="4">Lý tưởng của Đoàn thanh niên Cộng sản Hồ Chí Minh và Thanh niên Việt Nam là gì? Em sẽ làm gì để thực hiện lý tưởng đó?</option> 
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="question3">Câu hỏi 3</label>
+            <select class="form-control" id="question3" name="question3">
+                <option value="0" selected>None</option>
+                <option value="1">Đồng chí hãy giải thích và nói lên cảm nhận của mình đối với việc Đoàn thanh niên Cộng sản Hồ Chí Minh trải qua sau 6 lần đổi tên gọi ?</option>
+                <option value="2">Hãy đưa ra năm kiến nghị và giải pháp với đoàn trường nơi đồng chí đang công tác về các hoạt động thu hút và đoàn kết thanh niên ?</option>
+                <option value="3">Nêu những nhận thức của em về Đoàn thanh niên Cộng sản Hồ Chí Minh?</option>
+                <option value="4">Lý tưởng của Đoàn thanh niên Cộng sản Hồ Chí Minh và Thanh niên Việt Nam là gì? Em sẽ làm gì để thực hiện lý tưởng đó?</option> 
+            </select>
+        </div>
+        <br/>
+        {% block error %}{% endblock %}
+        <div class="col-md-4 col-md-offset-4 text-center">
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Generate</button>
+            </div>
+        </div>
+    </form>
+{% endblock %}

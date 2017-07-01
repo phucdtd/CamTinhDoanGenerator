@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+    <head>
+        <link href="/static/bootstrap/bootstrap.min.css" rel="stylesheet"/>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="initial-scale=1, width=device-width"/>
+        <style>
+        body {
+        height: 842px;
+        width: 595px;
+        /* to centre page on screen*/
+        margin-left: auto;
+        margin-right: auto;
+        }
+        </style>
+        <title>{{ title }}</title>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <p>Họ và tên: {{ user_name }}</p>
+            </div>
+            <div class="row">
+                <p>Lớp: {{ user_class }} </p>
+            </div>
+            <div class="row">
+                <p>Trường: {{ user_school }}</p>
+            </div>
+            <br>
+            <div class="text-center">
+                <h2>BÀI THU HOẠCH CẢM TÌNH ĐOÀN</h2>
+            </div>
+            <br>
+            <br>
+            <div section="1">
+                <p><u>Câu 1</u>: {{ question_1 }}</p>
+                <br>
+                {{ paragraph_1 | safe }}
+            </div>
+            {% if question_2 %}
+            <br>
+            <div section="2">
+                <p><u>Câu 2</u>: {{ question_2 }}</p>
+                <br>
+                <p>{{ paragraph_2 | safe }}</p>
+            </div>
+            {% endif %}
+            {% if question_3 %}
+            <br>
+            <div section="3">
+                <p><u>Câu 3</u>: {{ question_3 }}</p>
+                <br>
+                <p>{{ paragraph_3 | safe }}</p>
+            </div>
+            {% endif %}
+        </div>
+    </body>
+</html>
